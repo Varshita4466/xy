@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rice Plant Disease Detection</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Rice Plant Disease Detection</h1>
+    </header>
+    <nav>
+      <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('upload') }}">Upload Image</a></li>
+      </ul>
+  </nav>
+
+    <main id="home">
+        <h2>Welcome to Rice Plant Disease Detection</h2>
+        <p>
+            This project helps farmers detect diseases in rice plants using machine learning. It can identify various
+            diseases such as bacterial leaf blight, brown spot, leaf blast, and more. By early detection, farmers can
+            take necessary measures to protect their crops and improve yield.
+        </p>
+        <img src="{{ url_for('static', filename='assets/download.jpeg') }}" alt="Download Image">
+        <p>
+            After predicting the rice plant disease based on the uploaded image, the application can take appropriate measures
+            such as suggesting specific treatments, recommending relevant agricultural practices, or providing information about
+            the disease's impact on crop yield. This can assist farmers in making informed decisions to mitigate the disease and
+            ensure better crop health
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Rice Plant Disease Detection</p>
+    </footer>
+    <script src="{{ url_for('static', filename='upload.js') }}"></script>
+
+</body>
+
+</html>
+

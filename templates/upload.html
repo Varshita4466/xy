@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image - Rice Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Rice Plant Disease Detection</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('upload') }}">Upload Image</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Image</h2>
+            <form action="/predict" method="post" enctype="multipart/form-data" id="upload-form">
+                <input type="file" name="image" accept="image/*">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section class="prediction-section" id="prediction-result" style="display: none;">
+            <h2>Prediction Result</h2>
+            <p id="predicted-disease"></p>
+            <p id="probability"></p>
+        </section>
+
+        <p>
+            Take necessary precautions according to the predicted disease
+        </p>
+        <p>
+            Thank you
+        </p>
+    </main>
+
+    <script src="{{ url_for('static', filename='upload.js') }}"></script>
+
+</body>
+</html>
